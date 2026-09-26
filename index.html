@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Suhani Sharma</title>
+<meta name="description" content="Suhani Sharma — developer & aspiring entrepreneur. Personal website and portfolio." />
+<meta name="author" content="Suhani Sharma" />
+<meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14121c" media="(prefers-color-scheme: dark)" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page">
+
+  <header class="site-header">
+    <div class="logo" aria-hidden="true">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" />
+      </svg>
+    </div>
+
+    <nav class="nav">
+      <span class="nav-link active">Home</span>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1 class="fade-up">Suhani Sharma <span class="heart" aria-hidden="true">♡</span></h1>
+
+    <p class="bio fade-up">
+      I'm a 16-year-old
+      <span class="tooltip-word" tabindex="0">developer
+        <span class="tooltip">Building software & hardware since middle school</span>
+      </span>
+      and aspiring entrepreneur from Texas, passionate about using technology to solve problems and make a <em>positive impact</em> on society.
+    </p>
+
+    <p class="bio-secondary fade-up">
+      I enjoy tinkering with hardware, building software, and combining the two to create innovative systems and solutions — always exploring new technologies, learning new skills, and turning ideas into projects that can <em>make a difference</em>.
+    </p>
+
+    <div class="socials fade-up">
+      <a class="social-icon" href="https://github.com/SuhaniSharma072" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+      <a class="social-icon" href="https://www.linkedin.com/in/suhani-sharma-004241369/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a class="social-icon" href="mailto:suhanisharma072@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.2.5 7.3 6.1a1 1 0 0 0 1.28 0L20.1 6H4.2zM4 8.1v10.4c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V8.1l-7.24 6.06a2.5 2.5 0 0 1-3.2 0L4 8.1z"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-tag">reach for the moon even if u miss you'll land among the stars</p>
+  </footer>
+
+  <div class="night-scene" aria-hidden="true"><canvas></canvas></div>
+
+</div>
+<script src="scene.js" defer></script>
+</body>
+</html>
