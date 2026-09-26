@@ -97,13 +97,46 @@
 
   function makeStars() {
     stars = [];
-    const n = Math.round(W / 18);
-    for (let tries = 0; stars.length < n && tries < n * 20; tries++) {
-      const x = rand() * W, y = rand() * H * 0.5;
-      if (y > ridge(x, 0) - 10) continue;
-      if (Math.hypot(x - moon.x, y - moon.y) < moon.r + 12) continue;
-      stars.push({ x, y, r: 0.5 + rand() * 0.9, phase: rand() * Math.PI * 2, speed: 0.6 + rand() * 1.2 });
+    const n = Math.round(W / 16);
+    for (let tries = 0; stars.length < n && tries < n * 30; tries++) {
+      const x = rand() * W, y = rand() * H * 0.55;
+      if (y > ridge(x, 0) - 8) continue;
+      if (Math.hypot(x - moon.x, y - moon.y) < moon.r + 10) continue;
+      const big = rand() < 0.12; // a few bright four-point sparkles
+      stars.push({
+        x, y, big,
+        r: big ? 4 + rand() * 3 : 2 + rand() * 1.8,
+        spin: rand() * Math.PI * 2,
+        phase: rand() * Math.PI * 2,
+        speed: 0.5 + rand() * 1.4,
+      });
     }
+  }
+
+  // Classic five-point star
+  function star5(c, x, y, r, rot, color, a) {
+    c.globalAlpha = a;
+    c.fillStyle = color;
+    c.beginPath();
+    for (let i = 0; i < 10; i++) {
+      const rad = i % 2 ? r * 0.45 : r;
+      const ang = rot + (i * Math.PI) / 5 - Math.PI / 2;
+      c.lineTo(x + Math.cos(ang) * rad, y + Math.sin(ang) * rad);
+    }
+    c.closePath();
+    c.fill();
+  }
+
+  // Four-point sparkle: two thin diamonds crossed, with a dot in the middle
+  function sparkle(c, x, y, r, color, a) {
+    c.globalAlpha = a;
+    c.fillStyle = color;
+    const w = r * 0.22;
+    c.beginPath();
+    c.moveTo(x, y - r); c.lineTo(x + w, y); c.lineTo(x, y + r); c.lineTo(x - w, y); c.closePath();
+    c.moveTo(x - r, y); c.lineTo(x, y + w); c.lineTo(x + r, y); c.lineTo(x, y - w); c.closePath();
+    c.fill();
+    dot(c, x, y, w * 1.3, color, a);
   }
 
   function frame(t = 0) {
@@ -112,8 +145,12 @@
     ctx.globalAlpha = 1;
     ctx.drawImage(still, 0, 0, W, H);
     for (const s of stars) {
-      const a = reduce.matches ? 0.7 : 0.25 + 0.75 * (0.5 + 0.5 * Math.sin((t / 1000) * s.speed + s.phase));
-      dot(ctx, s.x, s.y, s.r, colors.muted, a);
+      const tw = reduce.matches ? 0.8 : 0.5 + 0.5 * Math.sin((t / 1000) * s.speed + s.phase);
+      if (s.big) {
+        sparkle(ctx, s.x, s.y, s.r * (0.75 + 0.25 * tw), colors.accent, 0.45 + 0.55 * tw);
+      } else {
+        star5(ctx, s.x, s.y, s.r, s.spin * 0.15, colors.accent, 0.35 + 0.65 * tw);
+      }
     }
     if (!reduce.matches && visible) raf = requestAnimationFrame(frame);
   }

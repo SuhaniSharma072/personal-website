@@ -251,34 +251,7 @@ em {
   height: 100%;
 }
 
-/* ---------- fade-up entrance ---------- */
-.fade-up {
-  opacity: 0;
-  transform: translateY(16px);
-  animation: fadeUp 0.7s ease forwards;
-}
-
-.fade-up:nth-child(1) { animation-delay: 0.05s; }
-.fade-up:nth-child(2) { animation-delay: 0.15s; }
-.fade-up:nth-child(3) { animation-delay: 0.25s; }
-.fade-up:nth-child(4) { animation-delay: 0.35s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-up {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/* ---------- projects page (numbered sections) ---------- */
+/* ---------- projects & achievements page ---------- */
 .projects-list {
   counter-reset: project;
   margin-top: 1rem;
@@ -287,12 +260,36 @@ em {
   flex: 1;
 }
 
+.page-title {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 8vw, 3.75rem);
+  line-height: 1.1;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.group {
+  margin-top: 2.5rem;
+}
+
+.section-title {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
 .project-card {
   counter-increment: project;
   padding: 1.5rem 0;
 }
 
-.project-card h2::before {
+.project-card h3::before {
   content: "[" counter(project, decimal-leading-zero) "]";
   display: block;
   font-family: "Space Mono", monospace;
@@ -302,7 +299,7 @@ em {
   margin-bottom: 0.6rem;
 }
 
-.project-card h2 {
+.project-card h3 {
   font-family: "Parisienne", cursive;
   font-weight: 400;
   font-size: 2rem;
@@ -310,7 +307,8 @@ em {
   margin-bottom: 0.4rem;
 }
 
-.project-card p {
+.project-card p,
+.achievement p {
   color: var(--muted);
   line-height: 1.65;
   font-size: 1.02rem;
@@ -326,4 +324,96 @@ em {
   letter-spacing: 0.08em;
   color: var(--accent);
   border-bottom: 1px solid var(--line);
+}
+
+/* achievements: a quiet list */
+.achievements {
+  list-style: none;
+}
+
+.achievement {
+  padding: 1.5rem 0;
+}
+
+.achievement h3 {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+/* patent innovations: click the title to see diagrams */
+.project-card p + p {
+  margin-top: 0.8rem;
+}
+
+.title-btn {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.title-btn:hover,
+.title-btn:focus-visible {
+  opacity: 0.6;
+}
+
+.lightbox {
+  margin: auto;
+  width: min(900px, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 2.5rem 1rem 1rem;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.lightbox::backdrop {
+  background: rgba(20, 12, 10, 0.7);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.figures {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.figures figure {
+  margin: 0;
+}
+
+.figures img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.figures figcaption {
+  margin-top: 0.5rem;
+  font-family: "Space Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
 }
