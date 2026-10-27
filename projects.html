@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Experience &amp; Achievements — Suhani Sharma</title>
+<title>Experience &amp; Achievements | Suhani Sharma</title>
 <meta name="description" content="Experience and achievements of Suhani Sharma." />
 <meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14121c" media="(prefers-color-scheme: dark)" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='none' stroke='%235a1e1b' stroke-width='3' stroke-linejoin='round' d='M16 28C6 21 2 15.5 2 10.5 2 6.4 5.2 3.5 9 3.5c3 0 5.4 1.8 7 4.5 1.6-2.7 4-4.5 7-4.5 3.8 0 7 2.9 7 7 0 5-4 10.5-14 17.5Z'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -30,111 +31,202 @@
 
   <main class="projects-list">
 
-    <h1 class="page-title">Experience &amp; Achievements</h1>
+    <section class="group" aria-labelledby="experience-heading">
+      <h2 class="section-title" id="experience-heading">Experience</h2>
+
+      <ul class="cv-list">
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Co-founder, <span class="cv-org">The Sila Initiative</span></p>
+            <p class="cv-desc">Builds low-cost Corsi-Rosenthal cube air purifiers (MERV-13 filters and upcycled PC fans) for Native communities in Alaska and California exposed to wildfire smoke, wood stoves, and diesel generators. Backed and mentored by Richard Sadowski and Brom Webb of Homefront EJ Morro Bay and partnered with the Yukon-Kuskokwim Health Corporation, which provides healthcare for 58 Native villages in southwest Alaska. In talks with the California Natural Resources Agency. The next phase adds a PMS5003 sensor and an ESP32 running TinyML forecasting that works without internet.</p>
+            <a class="cv-link" href="https://sila-initiative.vercel.app" target="_blank" rel="noopener noreferrer">Visit website →</a>
+          </div>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Satellite Events Organizer, <span class="cv-org">Hack Club</span></p>
+            <p class="cv-desc">Organizer of social coding hackathons in Dallas. Lead Organizer of Sunbeam Dallas and Haven Dallas. Brought in sponsors including Credera, HCB, Yubico, Infovision, and .xyz, and partnered with local STEM clubs and makerspaces to grow attendance.</p>
+          </div>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Lead Innovation Mentor, <span class="cv-org">DiscoverStem</span></p>
+            <p class="cv-desc">Guide students through spotting real-world problems and turning them into working solutions and products. Mentor them through research, prototyping, and filing patents with a patent attorney.</p>
+          </div>
+        </li>
+
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Student Ambassador, <span class="cv-org">Technovation</span></p>
+            <p class="cv-desc">Represent Technovation through its DFW chapter. Technovation is the global program that teaches girls to build tech solutions to problems in their communities.</p>
+          </div>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Camp Learn AI, <span class="cv-org">University of North Texas</span></p>
+            <p class="cv-desc">Attended UNT's Camp Learn AI.</p>
+          </div>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">App Development Camp, <span class="cv-org">Kode With Klossy</span></p>
+            <p class="cv-desc">Learned to build apps at Kode With Klossy, my entry point into tech.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="group" aria-labelledby="projects-heading">
       <h2 class="section-title" id="projects-heading">Projects</h2>
 
-      <article class="project-card">
-        <h3>The Sila Initiative</h3>
-        <p>A nonprofit I co-founded that builds Corsi-Rosenthal cube air purifiers with PM2.5 sensing for underserved Native communities. The next phase adds a PMS5003 sensor and an ESP32 running TinyML air-quality forecasting, designed to work locally in low-connectivity areas.</p>
-        <p>Currently in talks with CNRA and Northern Chumash Tribal Council</p>
-        <a class="project-link" href="https://sila-initiative.vercel.app" target="_blank" rel="noopener noreferrer">Visit website →</a>
-      </article>
-
-      <article class="project-card">
-        <h3>Pronoia</h3>
-        <p>A smart pill organizer. An ESP32-C3 with a reed switch detects when a compartment is opened, sounds a buzzer reminder, and logs doses to Firebase in real time, paired with a SwiftUI companion app. Originally built for the Congressional App Challenge.</p>
-        <p>Still Ongoing</p>
-      </article>
-
-      <article class="project-card">
-        <h3>CalligraphyApp</h3>
-        <p>A calligraphy coaching app that gives real-time camera feedback on pen angle and strokes. First built natively in Swift with Vision and CoreML, now being rebuilt in React Native and TypeScript with a Python/FastAPI backend using OpenCV and MediaPipe.</p>
-        <a class="project-link" href="https://github.com/SuhaniSharma072" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-      </article>
-
-      <article class="project-card">
-        <h3>Textile Wholesale Platform</h3>
-        <p>A B2B e-commerce site built with Next.js and Tailwind, connecting a family textile business to wholesale buyers — with Shopify-backed catalog, Razorpay payments, and automated order emails.</p>
-      </article>
+      <ul class="cv-list">
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Pronoia iOS App</p>
+            <p class="cv-desc">A SwiftUI companion app for the Pronoia smart pill organizer that shows dose logs from Firebase in real time. Built for the Congressional App Challenge.</p>
+            <span class="cv-tag">Still working on it</span>
+          </div>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Pronoia Smart Pill Organizer</p>
+            <p class="cv-desc">An ESP32-C3 with a reed switch detects when a compartment opens, sounds a buzzer reminder, and logs each dose to Firebase.</p>
+            <span class="cv-tag">Still working on it</span>
+          </div>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">CalliApp</p>
+            <p class="cv-desc">A calligraphy coaching app with real-time camera feedback on pen angle and strokes. Built in Swift with Vision and Core ML.</p>
+            <a class="cv-link" href="https://github.com/SuhaniSharma072" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+          </div>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Web Developer &amp; Site Manager, <span class="cv-org">Vakrangee Traders</span></p>
+            <p class="cv-desc">My grandfather started a textile business in his small town in India, which my maternal uncle runs today. At a time when many families in their town wouldn't let their daughters work, he pushed for my mom to go into tech, spending money he could have put back into his own business. After he passed away, the business was never the same. It still runs the traditional way, and it has been losing money because payments and orders were never streamlined. I owe the lifestyle I have to his choice, so I built and manage a B2B e-commerce site for the business with Next.js and Tailwind, connecting it to both wholesale and individual buyers through a Shopify-backed catalog, Razorpay payments, and automated order emails. It also has a "Text on WhatsApp" button, since WhatsApp is the most used way to communicate in India.</p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section class="group" aria-labelledby="patents-heading">
       <h2 class="section-title" id="patents-heading">Patent Innovations</h2>
 
-      <article class="project-card">
-        <h3><button type="button" class="title-btn" data-open="fig-hydro">Hydroplaning Active Prevention System</button></h3>
-        <p>A three-part system that predicts hydroplaning before it happens. When the car is parked, fender-mounted sensors deploy and use AR to measure the tread depth of each tire, then retract so mud and rocks can't reach the lens. While driving, a LiDAR sensor at the front scans the road ahead for standing water, telling a wide flooded stretch apart from a small puddle, and tracks the car's speed. An AI integrator combines tread depth, water, and speed into a risk score.</p>
-        <p>For everyday drivers, a Bluetooth sticker on the dashboard flashes and plays an audio warning, and announces which tire is worn at startup. In a self-driving car, the system slows the vehicle down automatically.</p>
-        <dialog class="lightbox" id="fig-hydro" aria-label="Diagrams">
-          <button type="button" class="lightbox-close" aria-label="Close">×</button>
-          <div class="figures">
-            <figure>
-              <img src="tread.png" alt="Diagram of a car showing tread-depth sensors in the fenders (Figure A) and a front water-detecting LiDAR sensor (Figure B)" />
-              <figcaption>Tread-depth and water sensors</figcaption>
-            </figure>
-            <figure>
-              <img src="dashboard.png" alt="Diagram of a car dashboard with the Bluetooth warning sticker (Figure C)" />
-              <figcaption>Dashboard alert sticker</figcaption>
-            </figure>
+      <ul class="cv-list">
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title"><button type="button" class="title-btn" data-open="fig-hydro">Hydroplaning Active Prevention System</button></p>
+            <p class="cv-desc">Fender-mounted sensors measure tire tread depth while parked, and a front LiDAR scans the road for standing water while driving. An AI integrator combines tread, water, and speed into a risk score, warning the driver through a Bluetooth dashboard sticker or slowing a self-driving car automatically. USPTO NPA Number 18954312.</p>
           </div>
-        </dialog>
-      </article>
-
-      <article class="project-card">
-        <h3><button type="button" class="title-btn" data-open="fig-shark">Shark Fin Blind Spot Monitor</button></h3>
-        <p>Brings blind-spot monitoring to older cars by repurposing the shark fin antenna housing on the roof. Inside, LiDAR scanners and radar build a live 3D picture of the surroundings and send it to a center console that shows the driver nearby vehicles, their speed, and distance. It installs in seconds on a heavy-duty magnetic base without changing the car's aerodynamics, even on cars without a shark fin, and optional cameras add a second check in bad weather.</p>
-        <dialog class="lightbox" id="fig-shark" aria-label="Diagrams">
-          <button type="button" class="lightbox-close" aria-label="Close">×</button>
-          <div class="figures">
-            <figure>
-              <img src="sharkfin.png" alt="Labeled diagrams of the shark fin blind spot monitor: roof placement, center console display, LiDAR scanner, casing, rear camera, and magnetic base" />
-              <figcaption>Roof unit, console, and components</figcaption>
-            </figure>
+          <dialog class="lightbox" id="fig-hydro" aria-label="Diagrams">
+            <button type="button" class="lightbox-close" aria-label="Close">×</button>
+            <div class="figures">
+              <figure>
+                <img src="tread.png" alt="Diagram of a car showing tread-depth sensors in the fenders (Figure A) and a front water-detecting LiDAR sensor (Figure B)" />
+                <figcaption>Tread-depth and water sensors</figcaption>
+              </figure>
+              <figure>
+                <img src="dashboard.png" alt="Diagram of a car dashboard with the Bluetooth warning sticker (Figure C)" />
+                <figcaption>Dashboard alert sticker</figcaption>
+              </figure>
+            </div>
+          </dialog>
+        </li>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title"><button type="button" class="title-btn" data-open="fig-shark">Shark Fin Blind Spot Monitor</button></p>
+            <p class="cv-desc">Brings blind-spot monitoring to older cars through the roof's shark fin antenna housing. LiDAR and radar build a live 3D view of nearby vehicles, their speed, and distance on a center console, and it installs in seconds on a magnetic base.</p>
           </div>
-        </dialog>
-      </article>
-    </section>
-
-    <section class="group" aria-labelledby="experience-heading">
-      <h2 class="section-title" id="experience-heading">Experience</h2>
-
-      <ul class="achievements">
-        <li class="achievement">
-          <h3>Hackathon Organizer</h3>
-          <p>Lead organizer of hackathons under Hack Club. Partnered with local STEM clubs and makerspaces to grow attendance and give participants more hardware to build with.</p>
-        </li>
-        <li class="achievement">
-          <h3>Innovation Mentor</h3>
-          <p>Taught students how to spot real-world problems and turn them into working solutions and products. Mentored them through the full research process and through filing patents with a patent attorney.</p>
-        </li>
-        <li class="achievement">
-          <h3>Technovation Ambassador</h3>
-          <p>Student Ambassador for Technovation, the global program that teaches girls to build tech solutions to problems in their communities.</p>
+          <dialog class="lightbox" id="fig-shark" aria-label="Diagrams">
+            <button type="button" class="lightbox-close" aria-label="Close">×</button>
+            <div class="figures">
+              <figure>
+                <img src="sharkfin.png" alt="Labeled diagrams of the shark fin blind spot monitor: roof placement, center console display, LiDAR scanner, casing, rear camera, and magnetic base" />
+                <figcaption>Roof unit, console, and components</figcaption>
+              </figure>
+            </div>
+          </dialog>
         </li>
       </ul>
     </section>
 
+    <section class="group" aria-labelledby="skills-heading">
+      <h2 class="section-title" id="skills-heading">Skills</h2>
+
+      <div class="skills">
+        <div class="skills-row">
+          <h3 class="skills-label">Software</h3>
+          <ul class="skills-items">
+            <li>Swift</li><li>SwiftUI</li><li>TypeScript</li><li>React Native</li><li>Next.js</li><li>Tailwind CSS</li><li>Python</li><li>FastAPI</li><li>Java</li><li>Firebase</li>
+          </ul>
+        </div>
+        <div class="skills-row">
+          <h3 class="skills-label">AI &amp; Vision</h3>
+          <ul class="skills-items">
+            <li>LLMs</li><li>OpenCV</li><li>MediaPipe</li><li>Core ML</li><li>Apple Vision</li><li>TinyML</li>
+          </ul>
+        </div>
+        <div class="skills-row">
+          <h3 class="skills-label">Electronics</h3>
+          <ul class="skills-items">
+            <li>ESP32</li><li>Raspberry Pi Pico W</li><li>Sensors (PMS5003, reed switches)</li><li>Breadboard prototyping</li>
+          </ul>
+        </div>
+        <div class="skills-row">
+          <h3 class="skills-label">Other</h3>
+          <ul class="skills-items">
+            <li>Patent research &amp; filing</li><li>Event organizing</li><li>Mentoring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
     <section class="group" aria-labelledby="achievements-heading">
       <h2 class="section-title" id="achievements-heading">Achievements</h2>
 
-      <ul class="achievements">
-        <li class="achievement">
-          <h3>Two pending hardware patents</h3>
-          <p>A hydroplaning prevention system and a shark fin blind-spot monitor for older vehicles (see Patent Innovations above), recognized by Texas Rep. Salman Bhojani at the Texas State Capitol.</p>
+      <ul class="cv-list">
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Two pending hardware patents</p>
+            <p class="cv-desc">Hydroplaning prevention and a shark fin blind-spot monitor, recognized by Texas Rep. Salman Bhojani at the Texas State Capitol.</p>
+          </div>
         </li>
-        <li class="achievement">
-          <h3>Published AI research &amp; Chairman's Award</h3>
-          <p>Published a paper on LLM applications in behavioral signal detection, which earned a Chairman's Award at the Advancing Healthcare Innovation Summit from Dr. Zisis Kozlakidis.</p>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Chairman's Award, <span class="cv-org">Advancing Healthcare Innovation Summit</span></p>
+            <p class="cv-desc">For my published paper on LLM applications in behavioral signal detection, presented by Dr. Zisis Kozlakidis.</p>
+          </div>
         </li>
-        <li class="achievement">
-          <h3>Hack Club Athena Award</h3>
-          <p>Recognized by Hack Club for building and shipping technical projects.</p>
+
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">America's Top Young Innovator 2026</p>
+            <p class="cv-desc">Received the Best Innovation in Sustainability &amp; Engineering Design Award, recognizing my design thinking, user-centered engineering, and development of sustainable solutions.</p>
+          </div>
         </li>
-        <li class="achievement">
-          <h3>Founded my school's TSA club</h3>
-          <p>Started a Technology Student Association chapter.</p>
+        <li class="cv-item">
+          <span class="cv-star" aria-hidden="true">✦</span>
+          <div class="cv-body">
+            <p class="cv-title">Athena Award, <span class="cv-org">Hack Club</span></p>
+            <p class="cv-desc">One of 200 girls worldwide invited to the fully sponsored Parthenon event in NYC in November 2025, where industry professionals mentored me on my cooking and skincare chatbots. Held in collaboration with MIT, the U.S. Congressional App Challenge, Girls Who Code, and GitHub.</p>
+          </div>
         </li>
       </ul>
     </section>
