@@ -604,3 +604,9 @@ em {
   color: var(--accent);
   border-bottom: 1px dotted var(--accent);
 }
+
+/* certificates are photos, so show them without the white diagram padding */
+.lightbox[aria-label="Certificate"] .figures img {
+  background: none;
+  padding: 0;
+}
